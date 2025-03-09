@@ -20,7 +20,7 @@ def to_datetime(df):
 to_datetime(orders_df)
 to_datetime(payment_analysis)
 
-geojson_path = "./E-Commerce Public Dataset/brazil-states.geojson"  # Update with your actual file path
+geojson_path = "./E-Commerce Public Dataset/brazil-states.geojson"  
 brazil_states_gdf = gpd.read_file(geojson_path)
 
 st.sidebar.title("E-Commerce Dashboard")
@@ -76,15 +76,15 @@ elif page == "Customer & Seller Segmentation":
         st.markdown("## Customer Distribution")
         fig = px.choropleth(
             cust_merged_gdf,
-            geojson=brazil_states_gdf,  # Use pre-loaded geojson
-            locations="sigla",  # Match the state abbreviation
-            featureidkey="properties.sigla",  # Match column in geojson
+            geojson=brazil_states_gdf,  
+            locations="sigla",  
+            featureidkey="properties.sigla", 
             color="customer_count",
             hover_name="name",
             title="Customer Distribution in Brazil",
             color_continuous_scale="viridis"
         )
-        fig.update_geos(fitbounds="locations", visible=False)  # Ensures proper map fitting
+        fig.update_geos(fitbounds="locations", visible=False) 
         st.plotly_chart(fig)
     
     with st.container():
