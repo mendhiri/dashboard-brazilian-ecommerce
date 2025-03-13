@@ -1,0 +1,2 @@
+streamlit-app: https://brazilian-ecommerce-mendhiri.streamlit.app/
+github-repo: https://github.com/mendhiri/dashboard-brazilian-ecommerce
