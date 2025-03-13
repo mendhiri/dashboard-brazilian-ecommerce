@@ -21,4 +21,7 @@ cd dashboard-brazilian-ecommerce
 streamlit run app.py
 ```
 
+## Streamlit app
+https://brazilian-ecommerce-mendhiri.streamlit.app/
+
 
